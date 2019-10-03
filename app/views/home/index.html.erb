@@ -1,0 +1,27 @@
+<h1>Out Now</h1>
+
+<div class="carousel no-autoinit">
+    <% @outnow.each do |movie| %>
+        <% if movie.artwork.attached? %>
+            <a class="carousel-item" href="<%= movie_path(movie) %>">
+                <%= image_tag(movie.artwork) %>
+                <label> <%= movie.name %></label>
+            </a>
+        <% end %>
+    <% end %>
+</div>
+
+<br>
+
+<h1>Coming Soon</h1>
+
+<div class="carousel no-autoinit">
+    <% @comingsoon.each do |movie| %>
+        <% if movie.artwork.attached? %>
+            <a class="carousel-item" href="<%= movie_path(movie) %>">
+                <%= image_tag(movie.artwork) %>
+                <label> <%= movie.name %></label>
+            </a>
+        <% end %>
+    <% end %>
+</div>

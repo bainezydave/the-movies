@@ -1,0 +1,9 @@
+<nav>
+    <div class="nav-wrapper  blue-grey darken-4">
+        <div class="col s12">
+            <% nav.each do |n| %>
+                <%= link_to n[:title], n[:url], class: "breadcrumb" %>
+            <% end %>
+        </div>
+    </div>
+</nav>
